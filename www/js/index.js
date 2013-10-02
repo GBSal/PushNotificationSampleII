@@ -34,7 +34,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        initPushwoosh();
+        this.initPushwoosh();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -46,12 +46,10 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
-    
-    
-    //****
-    
-    function initPushwoosh()
+    },
+
+
+    initPushwoosh:function ()
 {
     var pushNotification = window.plugins.pushNotification;
     
@@ -61,9 +59,13 @@ var app = {
         function(status) {
             var pushToken = status;
             console.warn('push token: ' + pushToken);
+            alert("Push token" + pushToken);
         },
         function(status) {
-            console.warn(JSON.stringify(['failed to register ', status]));
+            var msg= JSON.stringify(['failed to register ', status])
+            console.warn(msg);
+
+            alert (msg);
         }
     );
  
@@ -72,7 +74,9 @@ var app = {
             var userData = event.notification.userdata;
                                  
             if(typeof(userData) != "undefined") {
-            console.warn('user data: ' + JSON.stringify(userData));
+                var msg = JSON.stringify(userData)
+            console.warn('user data: ' + msg);
+                alert(msg);
         }
                                      
         navigator.notification.alert(title);
