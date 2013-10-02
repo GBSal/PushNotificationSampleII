@@ -1,0 +1,262 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "mainview",
+        "padding": "12px",
+        "designer|userClassName": "MainView",
+        "designer|initialView": true,
+        "layout": "card"
+    },
+    "designerId": "d94f5387-7608-433f-891f-23d1edff570a",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Books"
+            },
+            "designerId": "235ee2c0-67e2-44dc-bdc0-bebb9b4aea85",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "back",
+                        "hidden": true,
+                        "id": "back",
+                        "ui": "back",
+                        "text": "Back"
+                    },
+                    "designerId": "b4b71159-36e4-4b9e-af24-5b0b3e3ac75d",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "Add",
+                        "docked": "right",
+                        "id": "btnAdd",
+                        "ui": "action",
+                        "icon": "true",
+                        "iconCls": "add",
+                        "text": null
+                    },
+                    "designerId": "2b1f8a4e-80e2-44e5-976c-2b55fab2290e",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "booklist",
+                "ui": "round",
+                "store": "MyJsonStore"
+            },
+            "designerId": "f77f4227-b691-4482-9182-6d4a4289848b",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<div>\r",
+                            "<p>\r",
+                            "<strong>{name}</strong>\r",
+                            "</p>\r",
+                            "<p style=\"font-size:.7em\">\r",
+                            "<i>{author}</i>\r",
+                            "</p>\r",
+                            "<p style=\"font-size:.7em\">{description}</p>\r",
+                            "</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "55355225-0a40-45da-924c-8d0a8f9714cb"
+                },
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "top",
+                        "id": "txtSearch",
+                        "margin": "12px",
+                        "padding": null,
+                        "label": null,
+                        "labelAlign": "top"
+                    },
+                    "designerId": "81b6a478-e052-4538-b388-c349097d19b6"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "bookdetail",
+                "padding": "12px"
+            },
+            "designerId": "63bf63ca-aa72-47d4-8e67-87dc348b3132",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<div>\r",
+                            "<p >\r",
+                            "<strong>{name}</strong>\r",
+                            "\r",
+                            "</p>\r",
+                            "<p style=\"font-size:.7em\">\r",
+                            "{description}\r",
+                            "</p>\r",
+                            "</div>"
+                        ],
+                        "designer|displayName": "tpl"
+                    },
+                    "designerId": "0f3455d9-5410-42b3-bc4d-ec6cebe11442"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "newbook",
+                "padding": "12px"
+            },
+            "designerId": "59b35107-b0ac-41fc-babf-bacbe656cf9a",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "txtName",
+                        "label": "Name",
+                        "labelAlign": "top"
+                    },
+                    "designerId": "297af4e2-79ab-4e75-b710-a037c38d95e6"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "txtAuthor",
+                        "label": "Author",
+                        "labelAlign": "top"
+                    },
+                    "designerId": "76ebdc9d-7937-4019-952a-dd64186f9819"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": null,
+                        "docked": null,
+                        "id": "txtDescription",
+                        "margin": null,
+                        "padding": "1px",
+                        "style": null,
+                        "label": "Description",
+                        "labelAlign": "top",
+                        "name": "",
+                        "maxRows": 5
+                    },
+                    "designerId": "8791f08c-a170-4eb2-bb59-ba10054132f1"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "AddBook",
+                        "id": "btnSaveBook",
+                        "margin": "12px",
+                        "ui": "confirm",
+                        "text": "Add Book"
+                    },
+                    "designerId": "34a6f6e4-a9a3-4913-824b-9b0989d89621",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

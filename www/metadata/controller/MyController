@@ -1,0 +1,253 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyController"
+    },
+    "designerId": "d9b109ea-6672-4fb1-a069-0b6f476b10f9",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "MainView",
+                "selector": "#mainview"
+            },
+            "designerId": "e3bb4bcc-3233-45e5-8b20-8e35e8683132"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "BookList",
+                "selector": "#booklist"
+            },
+            "designerId": "6115c5b7-b5c3-44f0-9a01-dd49fd77ec26"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "backButton",
+                "selector": "#back"
+            },
+            "designerId": "94d9a519-4f51-46fb-affb-d79567a36c4f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onButtonTap",
+                "implHandler": [
+                    "button.hide();\r",
+                    "\r",
+                    "this.getMainView().animateActiveItem(0,{type:\"slide\", direction:\"left\"});\r",
+                    "\r",
+                    "this.getBookList().deselectAll();\r",
+                    "\r",
+                    "\r",
+                    "console.log(\"button tap\");"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "[action=back]"
+            },
+            "designerId": "0f55a56e-4398-4a85-adce-60bc943a4e32"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "BookDetail",
+                "selector": "#bookdetail"
+            },
+            "designerId": "0ff145ea-c3b7-4375-85de-1b5381d3aad2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onListItemTap",
+                "implHandler": [
+                    "this.getMainView().animateActiveItem(1,{type:\"flip\"});\r",
+                    "\r",
+                    "this.getBackButton().show();\r",
+                    "\r",
+                    "\r",
+                    "this.getBookDetail().setData(record.data);\r",
+                    "\r",
+                    "console.log(\"item Tapp\");"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "list"
+            },
+            "designerId": "7888a445-79aa-4dda-af03-1c4b9e292fa1"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "NewBook",
+                "selector": "#newbook"
+            },
+            "designerId": "31fd684c-9a33-4cf3-b873-c91078bd239e"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "AddButton",
+                "selector": "#btnAdd"
+            },
+            "designerId": "1922dafb-7ade-49b0-bdaf-959ef8822fcb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onButtonTap1",
+                "implHandler": [
+                    "this.getMainView().animateActiveItem(2,{type:\"slide\", direction:\"right\"});\r",
+                    "\r",
+                    "this.getBookList().deselectAll();\r",
+                    "\r",
+                    "this.getBackButton().show();\r",
+                    "\r",
+                    "console.log(\"Add new Button\");"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "[action=Add]"
+            },
+            "designerId": "e8aac4c0-3026-44c9-8b80-edd423e99788"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "SearchField",
+                "selector": "#txtSearch"
+            },
+            "designerId": "9912073f-0ca6-411f-bc19-f19328ff5b9a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSearchfieldKeyup",
+                "implHandler": [
+                    "var value   = textfield.getValue(),\r",
+                    "    store   = this.getBookList().getStore(),\r",
+                    "    query   = new RegExp(value, 'i');\r",
+                    "\r",
+                    "store.filter('name', query);\r",
+                    "\r",
+                    "console.log(\"Key pressed\");"
+                ],
+                "name": "keyup",
+                "designer|targetType": "Ext.field.Search",
+                "designer|controlQuery": "searchfield"
+            },
+            "designerId": "592087e3-9230-4d63-8564-da11d3520e78"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "SaveBook",
+                "selector": "#btnSaveBook"
+            },
+            "designerId": "05b72e2c-8976-4a09-ba5d-2d2a8bf42240"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onAddBookTap",
+                "implHandler": [
+                    "var n  = Ext.getCmp(\"txtName\").getValue();\r",
+                    "var a = Ext.getCmp(\"txtAuthor\").getValue();\r",
+                    "var d = Ext.getCmp(\"txtDescription\").getValue();\r",
+                    "\r",
+                    "store   = this.getBookList().getStore();\r",
+                    "\r",
+                    "store.add( {\r",
+                    "    id: '1',\r",
+                    "    name: n,\r",
+                    "    description:d,\r",
+                    "    author: a,\r",
+                    "    rating: '1',\r",
+                    "    imgurl: ''\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "console.log(\"Add new book clicked \");"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "[action=AddBook]"
+            },
+            "designerId": "c88cf47e-9f32-455d-8f14-b1bf2ada0afc"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            " [  {\r",
+            "                id: '1',\r",
+            "                name: 'A Time to Kill',\r",
+            "                description: 'Refered by Edward II, Christopher Marlowe',\r",
+            "                author: 'Aldous Huxley',\r",
+            "                rating: '1',\r",
+            "     \t\t\timgurl:\"\"\r",
+            "            },\r",
+            "            {\r",
+            "                id: '2',\r",
+            "                name: 'Death Be Not Proud',\r",
+            "                description: 'Holy Sonnets X, John Donne',\r",
+            "                author: 'John Gunther',\r",
+            "                rating: '2',\r",
+            "                imgurl:\"\"\r",
+            "            },\r",
+            "            {\r",
+            "                id: '3',\r",
+            "                name: 'The Golden Apples of the Sun',\r",
+            "                description: 'The Song of the Wandering Angus, W. B. Yeats',\r",
+            "                author: 'Ray Bradbury',\r",
+            "                rating: '5',\r",
+            "                imgurl:\"\"\r",
+            "            }\r",
+            "  ]"
+        ],
+        "model": "MyModel",
+        "storeId": "MyJsonStore",
+        "designer|userClassName": "MyJsonStore"
+    },
+    "designerId": "1d787c79-9f5b-403f-b9a2-0ad25f416b9a"
+}
